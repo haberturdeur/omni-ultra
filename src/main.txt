@@ -1,0 +1,13 @@
+#include <Arduino.h>
+void setup() {
+    pinMode(5, OUTPUT);
+    pinMode(6,OUTPUT);
+    TCCR0A=0;//reset the register
+    TCCR0B=0;//reset the register
+    TCCR0A=0b01010011;// fast pwm mode
+    TCCR0B=0b00001001;// no prescaler and WGM02 is 1
+    OCR0A=199;//control value from the formula
+}
+void loop() {
+
+}
