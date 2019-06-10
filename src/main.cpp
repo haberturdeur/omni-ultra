@@ -55,6 +55,7 @@ void loop()
     if (activated)
     {
         start = micros();
+        
         while(((PIND & 0b11111100) < 0b11111100) or ((PINB & 0b00000011) < 0b00000011)){
         
         }
